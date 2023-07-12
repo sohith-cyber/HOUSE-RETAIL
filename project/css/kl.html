@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Navigation Example</title>
+  <style>
+    .left-panel {
+      width: 200px;
+      float: left;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    .content {
+      margin-left: 200px;
+      padding: 20px;
+    }
+  </style>
+  <script>
+    function showContent(contentId) {
+      var content = document.getElementById(contentId);
+      var contents = document.getElementsByClassName("content");
+      for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = "none";
+      }
+      content.style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <div class="left-panel">
+    <ul>
+      <li><a href="#" onclick="showContent('home')">Home</a></li>
+      <li><a href="#" onclick="showContent('contact')">Contact</a></li>
+      <li><a href="#" onclick="showContent('information')">Information</a></li>
+      <li><a href="#" onclick="showContent('guide')">Guide</a></li>
+    </ul>
+  </div>
+  <div class="content" id="home">
+    <h2>Home</h2>
+    <p>Welcome to the Home page.</p>
+  </div>
+  <div class="content" id="contact" style="display: none;">
+    <h2>Contact</h2>
+    <p>Contact information goes here.</p>
+  </div>
+  <div class="content" id="information" style="display: none;">
+    <h2>Information</h2>
+    <p>Information goes here.</p>
+  </div>
+  <div class="content" id="guide" style="display: none;">
+    <h2>Guide</h2>
+    <p>Guide information goes here.</p>
+  </div>
+</body>
+</html>
